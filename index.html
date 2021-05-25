@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Search</title>
+	<style>
+		.book-search-input{
+			border: 2px solid gray; 
+			border-radius: 3px; 
+			background: white; 
+			outline: none; 
+			height: 30px; 
+			width: 300px;
+			font-size: 16px; 
+         }    
+
+		.book__search{
+			display: flex;
+			flex-direction: column;
+			align-items: center; 
+            justify-content: center;
+			padding: 10px;
+		}
+
+		.book__image{
+			margin: 20px;
+		}
+
+		.book{
+			background: rgb(249, 250, 234);
+			padding: 10px;
+			border-radius: 6px;
+			margin: 10px 0;
+			display: flex;
+			align-items: flex-start;
+			max-width: 700px;
+		}
+		.ERROR{
+			border: 2px solid red; 
+			border-radius: 3px; 
+			background: #f1bda8d8; 
+			outline: none; 
+			height: 30px; 
+			width: 300px;
+			font-size: 14px; 
+		}
+		.validation{
+			display:none;
+			background-color: rgb(250, 212, 177);
+			margin: 5px;
+		}
+		.validation.active {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<form id="getBook" class="book__search">
+		<h1>Book Finder</h1>
+		<input type="search" class="book-search-input" placeholder="Type in title or author">
+		<span class="validation">Search field should contain more than 3 characters</span>
+		<div class="book-search-result"></div>
+	</form>
+	<script src="script.js"></script>
+</body>
+</html>
